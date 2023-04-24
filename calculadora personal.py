@@ -63,8 +63,9 @@ while not terminou:
         print("Por favor, escolha uma opção válida.")
         
     while True:
-        escolha = input("Deseja continuar? (sim/não): ")
-        break
+        try:
+            escolha = input("Deseja continuar? (sim/não): ")
+            break
         except ValueError:
             print("Essa não é uma resposta válida, tente novamente")
     if escolha == "não":
